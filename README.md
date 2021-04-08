@@ -1,7 +1,7 @@
 # devops-netology
-one
-two
-
+one\
+two\
+three
 # terraform .gitignore
 **/.terraform/* - директория .terraform находящаяся в любых директориях и ее поддиректории.
 *.tfstate - все файлы с расширением .tfstate
