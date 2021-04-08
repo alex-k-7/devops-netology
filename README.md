@@ -1,5 +1,6 @@
 # devops-netology
 one
+two
 
 # terraform .gitignore
 **/.terraform/* - директория .terraform находящаяся в любых директориях и ее поддиректории.
