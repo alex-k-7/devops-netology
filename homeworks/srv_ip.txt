@@ -1,0 +1,3 @@
+google.com - 173.194.222.139
+mail.google.com - 142.251.1.17
+drive.google.com - 64.233.164.194
