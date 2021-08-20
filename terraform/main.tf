@@ -25,6 +25,8 @@ resource "aws_instance" "first_ec2" {
     Name = "Test"
   }
   private_ip = "172.31.31.31"
-  private_dns = "first_ec2"
   associate_public_ip_address = true
 }
+
+data "aws_caller_identity" "current" {}
+data "aws_region" "current" {}
