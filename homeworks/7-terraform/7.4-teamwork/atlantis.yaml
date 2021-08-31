@@ -1,0 +1,20 @@
+version: 3
+automerge: true
+delete_source_branch_on_merge: true
+
+projects:
+- name: my-project-stage
+  dir: stage
+  workspace: stage
+  autoplan:
+   when_modified: ["*.tf"]
+   enabled: true
+
+- name: my-project-prod
+  dir: prod
+  workspace: prod
+  delete_source_branch_on_merge: false
+  apply_requirements: [mergeable, approved]
+  autoplan:
+   when_modified: ["*.tf"]
+   enabled: true

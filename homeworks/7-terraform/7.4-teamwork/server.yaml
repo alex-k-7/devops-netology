@@ -1,0 +1,17 @@
+repos:
+- id: github.com/alex-k-7/.*/
+  apply_requirements: [approved, mergeable]
+  workflow: custom
+  allowed_overrides: [apply_requirements, workflow]
+  allow_custom_workflows: true
+
+workflows:
+  custom:
+    plan:
+      steps:
+      - init
+      - plan:
+          extra_args: ["-lock", "false"]
+    apply:
+      steps:
+      - apply
