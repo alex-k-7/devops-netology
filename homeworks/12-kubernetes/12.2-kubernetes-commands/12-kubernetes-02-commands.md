@@ -33,7 +33,8 @@ hello-node   2/2     2            2           101s
 
 ```
 # создание пользователя
-PS C:\Users\kosogorskii.as> kubectl create serviceaccount dev1 serviceaccount/dev1 created
+PS C:\Users\kosogorskii.as> kubectl create serviceaccount dev1 
+serviceaccount/dev1 created
 
 # yaml файл для создания роли:
 
