@@ -5,17 +5,17 @@
 >Необходимо упаковать приложение в чарт для деплоя в разные окружения. >Требования:
 >* каждый компонент приложения деплоится отдельным deployment’ом/statefulset’ом;
 
-Приложение использую из предыдущих заданий. Чарт состоит из двух deployment, одного statefulset и одного сервиса - mychart
+Приложение использую из предыдущих заданий. Чарт состоит из двух deployment, одного statefulset и одного сервиса - [mychart](https://github.com/alex-k-7/devops-netology/tree/main/homeworks/13-kubernetes-config/13.4-kubernetes-config-helm/mychart)
 
 ![inst](install.jpg)
 
 >* в переменных чарта измените образ приложения для изменения версии.
 
-Меняем переменную tag в values.yaml.
+Меняем переменную tag в [values.yaml](https://github.com/alex-k-7/devops-netology/blob/main/homeworks/13-kubernetes-config/13.4-kubernetes-config-helm/mychart/values.yaml)
 
 ![up](upgrade.jpg)
 
->## Задание 2: запустить 2 версии в разных неймспейсах
+>#### Задание 2: запустить 2 версии в разных неймспейсах
 >Подготовив чарт, необходимо его проверить. Попробуйте запустить несколько копий >приложения:
 >* одну версию в namespace=app1;
 
@@ -28,7 +28,7 @@
 yc-user@cp1:~$ helm install demo2 -f mychart/new_values/values2.yaml mychart
 Error: INSTALLATION FAILED: rendered manifests contain a resource that already exists. Unable to continue with install: Namespace "helm" in namespace "" exists and cannot be imported into the current release: invalid ownership metadata; annotation validation error: key "meta.helm.sh/release-name" must equal "demo2": current value is "demo"
 ```
-Однако, если поменять также и переменную appVersion в chart.yaml, то релиз установится. Тут я запутался. Такое ощущение, что в этом не смысла. Должен быть всё-таки другой неймспейс.
+Однако, если поменять также и переменную appVersion в chart.yaml, то релиз установится. Тут я запутался. Такое ощущение, что в этом нет смысла. Должен быть всё-таки другой неймспейс.
 
 ![app1_2](app1_2.jpg)
 
