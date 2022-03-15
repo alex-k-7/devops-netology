@@ -28,7 +28,7 @@
 yc-user@cp1:~$ helm install demo2 -f mychart/new_values/values2.yaml mychart
 Error: INSTALLATION FAILED: rendered manifests contain a resource that already exists. Unable to continue with install: Namespace "helm" in namespace "" exists and cannot be imported into the current release: invalid ownership metadata; annotation validation error: key "meta.helm.sh/release-name" must equal "demo2": current value is "demo"
 ```
-Однако, если поменять также и переменную appVersion в chart.yaml, то релиз установится. Тут я запутался. Такое ощущение, что в этом нет смысла. Должен быть всё-таки другой неймспейс.
+Однако, если поменять также и переменную appVersion в chart.yaml, то релиз установится. Но такое ощущение, что в этом нет смысла. Новых подов не появилось... Должен быть всё-таки другой неймспейс.
 
 ![app1_2](app1_2.jpg)
 
