@@ -1,0 +1,14 @@
+replicaCount: 1
+
+namespace: helm
+
+fPort: 8000
+
+bPort: 9000
+
+dbPort: 5432
+
+image:
+  backrepo: aksdoc/kub-backend
+  frontrepo: aksdoc/kub-frontend
+  tag: "1.1.1"

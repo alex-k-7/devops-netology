@@ -1,0 +1,4 @@
+image:
+  backrepo: aksdoc/kub-backend
+  frontrepo: aksdoc/kub-frontend
+  tag: "1.1.2"

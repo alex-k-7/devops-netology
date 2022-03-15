@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: front
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: front
+  template:
+    metadata:
+      labels:
+        app: front
+    spec:
+      containers:
+      - name: frontend
+        image: {{ .Values.image.frontrepo }}:{{ .Values.image.tag | default .Chart.AppVersion }}
+        ports:
+        - containerPort: {{ .Values.fPort }}
+        
