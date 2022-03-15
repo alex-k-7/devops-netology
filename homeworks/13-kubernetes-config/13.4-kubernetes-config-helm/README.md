@@ -34,6 +34,6 @@ Error: INSTALLATION FAILED: rendered manifests contain a resource that already e
 
 >* третью версию в namespace=app2.
 
-Вот здесь всё сходится. Отдельный релиз, отдельные поды в другом неймспейсе и новая версия.
+Вот здесь всё сходится. Отдельный релиз, отдельные поды в другом неймспейсе и новая версия образа.
 
 ![app2](app2.jpg)
