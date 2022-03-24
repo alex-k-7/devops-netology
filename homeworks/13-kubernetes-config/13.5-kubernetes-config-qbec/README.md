@@ -9,5 +9,9 @@
 >* production окружение — каждый компонент в трёх экземплярах;
 >* для production окружения нужно добавить endpoint на внешний адрес.
 
+Окружение для развертывания - [qbec\test](https://github.com/alex-k-7/devops-netology/tree/main/homeworks/13-kubernetes-config/13.5-kubernetes-config-qbec/qbec/test)
+
+[qbec\test](qbec\test)
+
 
  
