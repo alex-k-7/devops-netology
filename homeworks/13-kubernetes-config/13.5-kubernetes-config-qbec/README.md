@@ -9,9 +9,16 @@
 >* production окружение — каждый компонент в трёх экземплярах;
 >* для production окружения нужно добавить endpoint на внешний адрес.
 
-Окружение для развертывания - [qbec\test](https://github.com/alex-k-7/devops-netology/tree/main/homeworks/13-kubernetes-config/13.5-kubernetes-config-qbec/qbec/test)
+Конфигурация приложения - [qbec\test](https://github.com/alex-k-7/devops-netology/tree/main/homeworks/13-kubernetes-config/13.5-kubernetes-config-qbec/qbec/test)
 
-[qbec\test](qbec\test)
+Проверяем, что для production окружения есть endpoint и количество реплик равно трем:
 
+![show](show.png)
 
+Разворачиваем stage и проверяем, что получилось:
+
+![po-svc_stage](po-svc_stage.png)
  
+Разворачиваем prod и проверяем:
+
+![po-svc_prod](po-svc_prod.png)
