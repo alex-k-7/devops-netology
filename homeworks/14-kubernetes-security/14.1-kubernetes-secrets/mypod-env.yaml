@@ -6,11 +6,14 @@ spec:
   containers:
   - name: mypod
     image: nginx
-    volumeMounts:
-    - name: mysecret
-      mountPath: "/etc/secret"
-      readOnly: true
-  volumes:
-  - name: mysecret
-    secret:
-      secretName: domain-cert
+    env:
+      - name: MYPOD_USER
+        valueFrom:
+          secretKeyRef:
+            name: mysecret
+            key: username
+      - name: MYPOD_PASS
+        valueFrom:
+          secretKeyRef:
+            name: mysecret
+            key: password
