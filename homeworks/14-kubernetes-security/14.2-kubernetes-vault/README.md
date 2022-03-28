@@ -52,33 +52,13 @@
 >)
 >```
 
-Поднимаем под, указывая все необходимые переменные - [vault-pod.yaml](---
-apiVersion: v1
-kind: Pod
-metadata:
-  name: my-vault
-spec:
-  containers:
-  - name: vault
-    image: vault
-    ports:
-    - containerPort: 8200
-      protocol: TCP
-    env:
-    - name: VAULT_DEV_ROOT_TOKEN_ID
-      value: "SeCrEt"
-    - name: VAULT_DEV_LISTEN_ADDRESS
-      value: "0.0.0.0:8200"
-    - name: VAULT_ADDR
-      value: "http://127.0.0.1:8200"
-    - name: VAULT_TOKEN
-      value: "SeCrEt")
+Поднимаем под, указывая все необходимые переменные - [vault-pod.yaml](https://github.com/alex-k-7/devops-netology/blob/main/homeworks/14-kubernetes-security/14.2-kubernetes-vault/vault-pod.yaml)
 
 Запускаем второй под в качестве клиента:
 ```
 k run -it fedora --image=fedora --restart=Never -- sh
 ```
-Далее смотрим IP пода my-vault, указываем его в скрипте [secret-sdd.py](https://github.com/alex-k-7/devops-netology/blob/main/homeworks/14-kubernetes-security/14.2-kubernetes-vault/secret-add.py) и запускаем скрипт. Проверяем, что получилось:
+Далее смотрим IP пода my-vault, указываем его в скрипте [secret-add.py](https://github.com/alex-k-7/devops-netology/blob/main/homeworks/14-kubernetes-security/14.2-kubernetes-vault/secret-add.py) и запускаем скрипт. Проверяем, что получилось:
 
 ![secret](secret.png)
 
