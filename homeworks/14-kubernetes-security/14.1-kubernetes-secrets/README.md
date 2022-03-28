@@ -59,35 +59,10 @@
 >Выберите любимый образ контейнера, подключите секреты и проверьте >их доступность
 >как в виде переменных окружения, так и в виде примонтированного >тома.
 
-Секрет в виде тома - [mypod-vol]()
+Секрет в виде тома - [mypod-vol](https://github.com/alex-k-7/devops-netology/blob/main/homeworks/14-kubernetes-security/14.1-kubernetes-secrets/mypod-vol.yaml)
 
 ![vol](vol.png)
 
-Секрет в виде переменной - [mypod-env]()
+Секрет в виде переменной - [mypod-env](https://github.com/alex-k-7/devops-netology/blob/main/homeworks/14-kubernetes-security/14.1-kubernetes-secrets/mypod-env.yaml)
 
 ![env](env.png)
-
-
-
-
-
-
-
-
-
-
-
-
----
-
-### Как оформить ДЗ?
-
-Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
-
-В качестве решения прикрепите к ДЗ конфиг файлы для деплоя. Прикрепите скриншоты вывода команды kubectl со списком запущенных объектов каждого типа (deployments, pods, secrets) или скриншот из самого Kubernetes, что сервисы подняты и работают, а также вывод из CLI.
-
----
-
-
-
-
