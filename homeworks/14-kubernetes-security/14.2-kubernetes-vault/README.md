@@ -62,4 +62,4 @@ k run -it fedora --image=fedora --restart=Never -- sh
 
 ![secret](secret.png)
 
-Срипт отработал - появился новые секрет.
+Скрипт отработал - появился новый секрет.
