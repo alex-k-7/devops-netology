@@ -1,0 +1,46 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: np-for-multitool
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      run: multitool
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - ipBlock:
+       cidr: 10.233.96.150/32
+  egress:
+  - {}
+
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: np-for-mypod
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      app: frontend
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          run: multitool
+    ports:
+    - protocol: TCP
+      port: 80    
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          run: multitool
