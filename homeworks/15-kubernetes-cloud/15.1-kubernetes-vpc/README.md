@@ -26,7 +26,7 @@
 
 
 
- [Код Terraform](terraform\hw-15)
+ [Код Terraform](terraform\hw-15\main.tf)
 
  Public VM
 
