@@ -26,7 +26,7 @@
 
 
 
- [Код Terraform](terraform\hw-15\main.tf)
+ [Код Terraform](https://github.com/alex-k-7/devops-netology/blob/main/terraform/hw-15/main.tf)
 
  Public VM
 
