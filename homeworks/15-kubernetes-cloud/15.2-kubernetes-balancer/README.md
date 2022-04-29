@@ -10,7 +10,7 @@
 >- Положить в bucket файл с картинкой;
 >- Сделать файл доступным из Интернет.
 
-Конфиг - [bucket.tf](..\..\..\terraform\hw-15\bucket.tf)
+Конфиг - [bucket.tf](https://github.com/alex-k-7/devops-netology/blob/main/terraform/hw-15/bucket.tf)
 
 Сcылка на [картинку](https://storage.yandexcloud.net/aks-netology-bucket/pic-1)
 
@@ -23,7 +23,7 @@
 >- Создать сетевой балансировщик;
 >- Проверить работоспособность, удалив одну или несколько ВМ.
 
-Конфиг для создания группы виртуальных машин и балансировщика - [instance-group.tf](..\..\..\terraform\hw-15\instance-group.tf)
+Конфиг для создания группы виртуальных машин и балансировщика - [instance-group.tf](https://github.com/alex-k-7/devops-netology/blob/main/terraform/hw-15/instance-group.tf)
 
 ![ig-1](ig-1.jpg)
 ![ig-2](ig-2.jpg)
