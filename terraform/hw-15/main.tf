@@ -2,7 +2,7 @@ provider "yandex" {
     token     = var.OA_TOKEN
     cloud_id  = var.CLOUD_ID
     folder_id = var.FOLDER_ID
-    zone      = "ru-central1-b"
+    zone      = var.ZONE
 }
 
 # network #
@@ -22,14 +22,14 @@ resource "yandex_vpc_route_table" "netology-rt-1" {
 resource "yandex_vpc_subnet" "netology-subnet-a" {
     name           = "public"
     v4_cidr_blocks = ["192.168.10.0/24"]
-    zone           = "ru-central1-b"
+    zone           = var.ZONE
     network_id     = "${yandex_vpc_network.netology.id}"
 }
 
 resource "yandex_vpc_subnet" "netology-subnet-b" {
     name           = "private"
     v4_cidr_blocks = ["192.168.20.0/24"]
-    zone           = "ru-central1-b"
+    zone           = var.ZONE
     network_id     = "${yandex_vpc_network.netology.id}"
     route_table_id = "${yandex_vpc_route_table.netology-rt-1.id}"
 }
@@ -57,7 +57,7 @@ resource "yandex_compute_instance" "nat" {
     }
 }
 # virtual machines #
-resource "yandex_compute_instance" "vm1" {
+/* resource "yandex_compute_instance" "vm1" {
     name = "public-vm"
     scheduling_policy {
         preemptible = true
@@ -79,7 +79,8 @@ resource "yandex_compute_instance" "vm1" {
     metadata = {
         ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
     }
-}
+} */
+
 resource "yandex_compute_instance" "vm2" {
     name = "private-vm"
     scheduling_policy {

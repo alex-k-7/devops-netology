@@ -9,3 +9,7 @@ variable "CLOUD_ID" {
 variable "FOLDER_ID" {
     type = string
 }
+
+variable "ZONE" {
+    type = string
+}
