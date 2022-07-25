@@ -57,7 +57,7 @@ resource "yandex_compute_instance" "nat" {
     }
 }
 # virtual machines #
-/* resource "yandex_compute_instance" "vm1" {
+ resource "yandex_compute_instance" "vm1" {
     name = "public-vm"
     scheduling_policy {
         preemptible = true
@@ -79,7 +79,7 @@ resource "yandex_compute_instance" "nat" {
     metadata = {
         ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
     }
-} */
+}
 
 resource "yandex_compute_instance" "vm2" {
     name = "private-vm"
